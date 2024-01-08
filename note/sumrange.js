@@ -4,3 +4,6 @@ function sumRagne(num) {
 }
 
 console.log(sumRagne(4));
+// return 3 + sumRange(2)
+//              return 2 + sumRange(1)
+//                          return 1
