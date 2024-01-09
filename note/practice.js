@@ -42,3 +42,24 @@ function fib(num) {
 // console.log(fib(4)); // 3
 // console.log(fib(10)); // 55
 // console.log(fib(28)); // 317811
+
+function reverse(str) {
+  if (str.length === 1) return str;
+  return reverse(str.slice(1)) + str[0];
+}
+
+// console.log(reverse('a'));
+// console.log(reverse('awesome'));
+// console.log(reverse('hello world'));
+
+function isPalindrome(str) {
+  if (str.length === 1) return true;
+  if (str.length === 2) return str[0] === str[1];
+  if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
+  return false;
+}
+
+// console.log(isPalindrome('awesome'));
+// console.log(isPalindrome('tacocat'));
+// console.log(isPalindrome('amanaplanacanalpanama'));
+// console.log(isPalindrome('amanaplanacanalpandemonium'));
