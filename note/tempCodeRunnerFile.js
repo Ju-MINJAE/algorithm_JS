@@ -1,2 +1,2 @@
 
-  while (middle !== val) {
+  }

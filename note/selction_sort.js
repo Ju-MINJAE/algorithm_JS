@@ -18,3 +18,10 @@ function selctionSort(arr) {
 }
 
 selctionSort([34, 22, 10, 19, 17]);
+
+// Big O of Sorting Algorithms
+
+//               시간복잡도(Best-Worst)           공간복잡도
+// bubbleSort      O(n) - O(n^2)                 O(1)
+// insertionSort   O(n) - O(n^2)                 O(1)
+// selectionSort   O(n^2) - O(n^2)               O(1)
