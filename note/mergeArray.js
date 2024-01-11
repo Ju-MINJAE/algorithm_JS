@@ -24,8 +24,6 @@ function merge(arr1, arr2) {
   return results;
 }
 
-// console.log(merge([1, 10, 50], [2, 14, 99, 100]));
-
 function mergeSort(arr) {
   if (arr.length <= 1) return arr;
 
@@ -37,3 +35,5 @@ function mergeSort(arr) {
 }
 
 console.log(mergeSort([10, 24, 76, 72, 1, 9]));
+
+// 시간복잡도 : O(n log n), 공간복잡도 : O(n)
