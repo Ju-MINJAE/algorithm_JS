@@ -53,6 +53,59 @@ class BinarySearchTree {
     if (!found) return false;
     return current;
   }
+
+  BFS() {
+    var node = this.root,
+      data = [],
+      queue = [];
+    queue.push(node);
+    while (queue.length) {
+      node = queue.shift();
+      data.push(node.value);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return data;
+  }
+
+  DFSPreOrder() {
+    var data = [];
+    var current = this.root;
+
+    function traverse(node) {
+      data.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(current);
+    return data;
+  }
+
+  DFSPostOrder() {
+    var data = [];
+    var current = this.root;
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node.value);
+    }
+    traverse(current);
+    return data;
+  }
+
+  DFSInOrder() {
+    var data = [];
+    var current = this.root;
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      data.push(node.value);
+      if (node.right) traverse(node.right);
+    }
+    traverse(current);
+    return data;
+  }
 }
 
 //      10
@@ -68,7 +121,11 @@ tree.insert(11);
 tree.insert(16);
 tree.insert(7);
 
-console.log(tree.find(6));
-console.log(tree.find(5));
+// console.log(tree.find(6));
+// console.log(tree.find(5));
+console.log(tree.BFS());
+console.log(tree.DFSPreOrder());
+console.log(tree.DFSPostOrder());
+console.log(tree.DFSInOrder());
 
 // 시간복잡도 : 삽입O(logN) 탐색(logN)
